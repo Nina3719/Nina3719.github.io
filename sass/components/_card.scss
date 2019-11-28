@@ -1,0 +1,98 @@
+.card {
+
+    // Functionality
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    &__side {
+        font-size: 2rem;
+
+        height: 50rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: .3rem;
+        box-shadow: 0 1.5rem 4rem rgba($color-shadow, .15);
+
+        &--front {
+            background-color: white;
+        }
+
+        &--back {
+            background-color: green;
+            transform: rotateY(180deg);
+
+            &-1{
+                background-image: linear-gradient(to right bottom, rgba(156,197,227,0.9598214285714286) 0%, rgba(130,126,149,1) 100%);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, rgba(156,197,227,0.9598214285714286) 0%, rgba(130,126,149,1) 100%);
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back  {
+        transform: rotateY(0);
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba(156,197,227,0.9598214285714286) 0%, rgba(130,126,149,1) 100%),
+            url(../../img/card-finance.jpeg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba(156,197,227,0.9598214285714286) 0%, rgba(130,126,149,1) 100%),
+            url(../../img/card-hack.jpeg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-primary-text;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba(156,197,227,0.8) 0%, rgba(130,126,149,.8) 100%);
+            // background-image: linear-gradient(to right bottom, rgba(255,252,252,0.8), rgba(183,227,231,.8));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba(156,197,227,0.8) 0%, rgba(130,126,149,.8) 100%);
+        }
+    }
+
+}
+
+.card__details{
+    font-size: $default-font-size;
+    padding: 3rem;
+}
