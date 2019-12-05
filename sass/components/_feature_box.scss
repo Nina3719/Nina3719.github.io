@@ -15,6 +15,10 @@
         color: transparent;
         padding-top: 3px;
         padding-left: 3px;
+
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }    
     }
 
     &__icon-link {

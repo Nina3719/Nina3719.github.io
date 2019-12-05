@@ -125,6 +125,7 @@
 }
 
 .btn-more {
+
     &:link,
     &:visited {
         font-size: $default-font-size;
@@ -136,7 +137,6 @@
         position: absolute;
         bottom: 1.5rem;
         right: 2rem;
-        
     }
 
     &--link {

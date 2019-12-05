@@ -90,6 +90,32 @@
         }
     }
 
+    @include respond(tab-port) {
+        height: auto;
+
+        &__side {
+            height: auto;
+            position: relative;
+            border-radius: .3rem;
+            box-shadow: 0 1.5rem 4rem rgba($color-shadow, .15);
+
+            &--back {
+                transform: rotateY(0);
+
+                &-1 {
+                    display: none;
+                }
+
+                &-2 {
+                    display: none;
+                }
+            }
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+    }
 }
 
 .card__details{

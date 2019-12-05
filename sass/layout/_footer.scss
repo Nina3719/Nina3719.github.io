@@ -4,6 +4,10 @@
     font-size: 1.4rem;
     text-align: center;
 
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
     &__navigation {
         border-top: 1px solid $color-secondary-text;
         padding-top: 2rem;
