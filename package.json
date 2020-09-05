@@ -12,6 +12,6 @@
     "jquery": "^3.4.1"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   }
 }
